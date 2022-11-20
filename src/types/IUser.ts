@@ -6,6 +6,6 @@ export interface IUser {
 
 export type UserContextType = {
   user: IUser;
-  signIn: (username: string) => boolean;
+  signIn: (name: string) => boolean;
   logOut: () => void;
 };

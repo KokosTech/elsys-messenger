@@ -16,21 +16,21 @@ const UserProvider: React.FC<Props> = ({ children }) => {
   const [user, setUser] = useState({} as IUser);
   const navigate = useNavigate();
 
-  const signIn = (username: string) => {
-    if (!username) return false;
-    if (username.length < 3 || username.length > 18) return false;
+  const signIn = (name: string) => {
+    if (!name) return false;
+    if (name.length < 3 || name.length > 18) return false;
 
     const id = getId();
     setUser({
       id: id,
-      name: username,
+      name: name,
     });
 
     localStorage.setItem(
       "user",
       JSON.stringify({
         id,
-        username,
+        name,
       })
     );
 

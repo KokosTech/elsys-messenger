@@ -21,7 +21,6 @@ const SingIn = () => {
   };
 
   useEffect(() => {
-    console.log("error", error);
     document.title = i18n.SIGN_IN;
   }, []);
 
